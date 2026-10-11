@@ -9,7 +9,7 @@ Two ₹15 lakh portfolios of 10 stocks each (no overlap): **A** is high risk, **
 3. **Test 2, the allocation:** at today's return, would the efficient frontier rebuilt from each era's data pick the same weights?
 
 ## Live site
-`https://<your-username>.github.io/<repo-name>/` (replace after publishing)
+`https://mukulpgdm27g-alt.github.io/risk-lab/`
 
 ## Run locally
 Open `index.html` in a browser. It is a single self-contained file (data and charts included), so it needs no server, install or internet connection.
