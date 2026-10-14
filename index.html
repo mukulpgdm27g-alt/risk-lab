@@ -129,12 +129,40 @@ td,.cell,.hc{font-family:"JetBrains Mono",ui-monospace,Menlo,monospace;font-size
 body.home .r1>#thm{display:inline-flex}
 .cta button.pr,.cta .pr,.up{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1a1405;border:0}
 :root[data-theme="dark"] .hd .seg button.on,:root[data-theme="dark"] .hd .tabs button.on{color:#1a1405}
+
+/* business-style start screen */
+#gate{background:linear-gradient(135deg,var(--hdrA),var(--hdrB));-webkit-backdrop-filter:none;backdrop-filter:none}
+#gate::before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:36px 36px;-webkit-mask-image:radial-gradient(circle at 30% 30%,#000,transparent 75%);mask-image:radial-gradient(circle at 30% 30%,#000,transparent 75%)}
+#gate .gc{position:relative;max-width:1060px;width:100%;display:grid;grid-template-columns:1.1fr .9fr;padding:0;overflow:hidden;background:var(--card);background-image:none;border-radius:24px;box-shadow:0 30px 90px rgba(0,0,0,.5)}
+#gate #gclose{position:absolute;top:12px;right:12px;z-index:3;width:30px;height:30px;border:0;border-radius:99px;background:rgba(0,0,0,.18);color:var(--ink);font-size:15px;cursor:pointer}
+#gate .gl{padding:clamp(24px,4vw,46px);color:#eaf0ff;background:radial-gradient(520px 300px at 100% 0,rgba(236,208,138,.22),transparent),radial-gradient(420px 300px at 0 100%,rgba(99,102,241,.35),transparent),linear-gradient(135deg,var(--hdrA),var(--hdrB))}
+#gate .gk{margin-top:26px;font:600 11.5px Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--gold2)}
+#gate .gl h1{font-size:clamp(28px,3.6vw,42px);line-height:1.08;margin:10px 0 14px;color:#fff}
+#gate .gl h1 em{font-style:normal;background:linear-gradient(90deg,var(--gold2),#fff);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+#gate .gl .lead{color:#b9c6e4;font-size:16px}
+#gate .gv{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:12px}
+#gate .gv li{border-left:3px solid var(--gold);padding-left:12px}
+#gate .gv b{display:block;color:#fff;font-size:15px}
+#gate .gv span{color:#9fb0cf;font-size:13.5px}
+#gate .gt{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+#gate .gt span{font-size:12px;color:#9fb0cf;border:1px solid rgba(255,255,255,.16);padding:4px 10px;border-radius:8px}
+#gate .gr{padding:clamp(22px,3.4vw,40px);background:var(--card);color:var(--ink)}
+#gate .gk2{font:600 11.5px Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+#gate .gr h2{margin:6px 0 4px;font-size:24px}
+@media(max-width:860px){#gate .gc{grid-template-columns:1fr}#gate .gk{margin-top:16px}}
 </style></head><body>
-<div id="gate"><div class="gc" style="position:relative"><button id="gclose" title="Close" style="position:absolute;top:10px;right:12px;border:0;background:transparent;font-size:20px;cursor:pointer">✕</button><div class="eyebrow">FRA Group Project 1 · Risk, VaR and the efficient frontier</div><h1>Portfolio risk lab</h1><p class="lead">Upload your daily stock prices in Excel and watch the whole dashboard build itself: returns, beta, VaR, Expected Shortfall and the efficient frontier.</p>
-<div class="g3s"><div><b>1</b><span>Upload Excel</span></div><div><b>2</b><span>It builds in seconds</span></div><div><b>3</b><span>Explore the dashboard</span></div></div>
-<label class="dz" id="dz"><b>Drop your Excel file here</b><br><span class="s">or click to choose (.xlsx). Prices, Portfolios sheets required.</span><input id="gx" type="file" accept=".xlsx,.xls" hidden></label>
+<div id="gate"><div class="gc"><button id="gclose" title="Close" aria-label="Close">✕</button>
+<div class="gl"><span class="brand">Portfolio risk lab</span>
+<div class="gk">For analysts, advisors and investors</div>
+<h1>Know how much your portfolio can lose, <em>before the market shows you.</em></h1>
+<p class="lead">Upload your stock prices and portfolios in one Excel file. Get beta, VaR, Expected Shortfall, diversification and an efficient frontier, tested on a crash, a calm year and today.</p>
+<ul class="gv"><li><b>Answers in rupees</b><span>Risk shown as money at stake, not just a label.</span></li><li><b>Stress-tested, not assumed</b><span>The 2020 crash, a calm year and today, side by side.</span></li><li><b>Your data stays with you</b><span>Everything runs in your browser. Nothing is uploaded.</span></li></ul>
+<div class="gt"><span>VaR</span><span>Expected Shortfall</span><span>Beta</span><span>Efficient frontier</span><span>Monte Carlo</span></div></div>
+<div class="gr"><div class="gk2">Start your analysis</div><h2>Upload your data</h2>
+<div class="g3s"><div><b>1</b><span>Upload Excel</span></div><div><b>2</b><span>Built in seconds</span></div><div><b>3</b><span>Read the results</span></div></div>
+<label class="dz" id="dz"><b>Drop your Excel file here</b><br><span class="s">or click to choose (.xlsx). Prices and Portfolios sheets required.</span><input id="gx" type="file" accept=".xlsx,.xls" hidden></label>
 <div id="gs" class="gstat"></div><div class="cta"><button id="gtpl">Download Excel template</button><button id="gskip" class="pr">Try with the sample data →</button></div>
-<p class="s" style="font-size:13px;margin:14px 0 0">Everything runs in your browser; your file is not uploaded anywhere. Group members: Mukul Singh, Manik Ratty, Pari Aggarwal, Kanika Khandelwal, Venu Pratap Singh.</p></div></div>
+<p class="s" style="font-size:12.5px;margin:14px 0 0">FRA Group Project 1 · Mukul Singh, Manik Ratty, Pari Aggarwal, Kanika Khandelwal, Venu Pratap Singh. Educational project, not investment advice.</p></div></div></div>
 <script id="bt">window.BUILT=null</script>
 
 <div class="hd"><div class="r1"><span class="brand">Portfolio risk lab</span>
